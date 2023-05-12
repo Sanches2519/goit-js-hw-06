@@ -14,7 +14,7 @@ function createBoxes(amount) {
 
     refs.box.append(element);
   }
-}
+};
 
 refs.create.addEventListener("click", onCreateElement);
 
