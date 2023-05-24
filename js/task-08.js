@@ -18,8 +18,9 @@ function onButtonSubmit(event) {
    event.currentTarget.value;
   } else if (email.value !== "" || password.value !== "") {
     event.currentTarget.reset();
+    console.log(data);
   }
 
 
-  console.log(data);
+  
 }

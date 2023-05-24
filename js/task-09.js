@@ -1,10 +1,14 @@
-const container = document.querySelector(".change-color");
-const span = document.querySelector('.color');
-container.addEventListener("click", onBodyBackgroundColor);
+const refs = {
+  body: document.querySelector("body"),
+  container: document.querySelector(".change-color"),
+  span: document.querySelector(".color"),
+};
+
+refs.container.addEventListener("click", onBodyBackgroundColor);
 
 function onBodyBackgroundColor() {
-  document.body.style.backgroundColor = getRandomHexColor();
-  span.textContent = getRandomHexColor();
+  refs.body.style.backgroundColor = getRandomHexColor();
+  refs.span.textContent = refs.body.style.backgroundColor;
 }
 
 function getRandomHexColor() {
